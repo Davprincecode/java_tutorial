@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static org.springframework.util.StringUtils.split;
+import static org.springframework.util.StringUtils.toStringArray;
+
 @SpringBootApplication
 public class LessontoothApplication {
 
@@ -69,18 +72,61 @@ public class LessontoothApplication {
             System.out.println(x);
         }
 
-        System.out.println("================= example ==============================");
-
+        System.out.println("================= nested for loop ==============================");
         // Outer loop
         // multiplication table
         for (int i = 1; i <= 4; i++) {
-
             System.out.println("multiplication table : " + i);
             for (int j = 1; j <= 12; j++) {
                 System.out.println( i + " " + "*" + " " + j  + " " + "=" + i * j);
             }
-
         }
+
+        System.out.println("========================== decreament ============");
+        // 5,4,3,2,1
+
+        for(int i =5; i >= 1; i--){
+           System.out.println(i);
+        }
+
+        System.out.println("===============  for each loop ========");
+
+        String[] cars = {"bmw", "toyota", "suv", "highlander", "vold", "volvo"};
+
+        for (String data : cars) {
+          System.out.println(data);
+        }
+
+        System.out.println("==================calculate the sum of all number in the collection");
+
+        int[] numbers = {2, 5, 6,8,6,5};
+
+        int total = 0;
+        for (int data: numbers) {
+            //total = total + data;
+           total += data;
+        }
+        System.out.println(total);
+
+        System.out.println("=============================== for-each loop to count how many vowels are in a given word. =====================");
+
+        //for-each loop to count how many vowels are in a given word.
+
+        String myWord = "baby";
+
+        String[] myChar = myWord.split("");
+        int count = 0;
+        //a,e,i,o,u
+        for (String data : myChar) {
+
+            if (data.equals("a") || data.equals("e") || data.equals("i") || data.equals("o") || data.equals("u")){
+                count +=1;
+            }
+        }
+
+        System.out.println(count);
+
+
 
     }
 
