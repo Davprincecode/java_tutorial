@@ -129,7 +129,7 @@ public class LessontoothApplication {
 
         System.out.println(count);
 
-        // find largest number
+        System.out.println("=============find largest number================");
 
 
         int max= 0;
@@ -141,8 +141,8 @@ public class LessontoothApplication {
         }
 
         System.out.println("Largest number: " + max);
-        // find divisible  number by 2
 
+        System.out.println(" ============= find even number ================");
 
         int  divisible = 0;
         for  (int num : numbers) {
@@ -151,9 +151,27 @@ public class LessontoothApplication {
                 System.out.println(num);
 
             }
-
         }
 
+        System.out.println("Reverse string: Use a for-each loop to reverse the characters in a string.");
+
+        String myString = "baby";
+
+        String[] myCharacter = myString.split("");
+
+        List<String> myReverseWord = new ArrayList<>();
+
+        for (String my_char : myCharacter) {
+            myReverseWord.add(0, my_char);
+        }
+        System.out.println(myReverseWord);
+
+        //collection
+        // mutable(changeable) and immutable (unchangeable)
+        // ordered (well arrange in memory) and unordered (not arrange)
+        // duplicate(allow duplicate value) and not duplicate (dont allow dupplicate value)
     }
+
+
 
 }
