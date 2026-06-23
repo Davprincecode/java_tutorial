@@ -102,11 +102,14 @@ public class LessontoothApplication {
         int[] numbers = {2, 5, 6,8,6,5};
 
         int total = 0;
+
         for (int data: numbers) {
             //total = total + data;
            total += data;
+
         }
         System.out.println(total);
+
 
         System.out.println("=============================== for-each loop to count how many vowels are in a given word. =====================");
 
@@ -126,7 +129,30 @@ public class LessontoothApplication {
 
         System.out.println(count);
 
+        // find largest number
 
+
+        int max= 0;
+
+        for (int num : numbers) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        System.out.println("Largest number: " + max);
+        // find divisible  number by 2
+
+
+        int  divisible = 0;
+        for  (int num : numbers) {
+            if (num % 2 == 0) {
+                divisible++;
+                System.out.println(num);
+
+            }
+
+        }
 
     }
 
