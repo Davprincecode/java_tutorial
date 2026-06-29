@@ -168,20 +168,19 @@ public class LessontoothApplication {
         // mutable(changeable) and immutable (unchangeable)
         // ordered (well arrange in memory) and unordered (not arrange)
         // duplicate(allow duplicate value) and not duplicate (dont allow dupplicate value)
+
+        System.out.println("============= set questions ==============");
+        //Given an array of integers, print only the unique values.
+        int[] myNum = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8};
+
+        Set<Integer> uniqueNumbers = new HashSet<>();
+
+        for(int varBle : myNum) {
+            uniqueNumbers.add(varBle);
+        }
+
+        System.out.println(uniqueNumbers);
+
     };
-
-
-
-  //Given an array of integers, print only the unique values.
-  int[] myNum = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8};
-
-    Set<Integer> uniqueNumbers = new HashSet<>();
-
-    for(int varBle : myNum) {
-    uniqueNumbers.add(varBle);
-    }
-
-    System.out.println(uniqueNumbers);
-
 
 }
