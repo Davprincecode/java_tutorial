@@ -4,9 +4,7 @@ import com.example.lessontooth.task3.PhoneBook;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static org.springframework.util.StringUtils.split;
 import static org.springframework.util.StringUtils.toStringArray;
@@ -170,8 +168,20 @@ public class LessontoothApplication {
         // mutable(changeable) and immutable (unchangeable)
         // ordered (well arrange in memory) and unordered (not arrange)
         // duplicate(allow duplicate value) and not duplicate (dont allow dupplicate value)
+    };
+
+
+
+  //Given an array of integers, print only the unique values.
+  int[] myNum = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8};
+
+    Set<Integer> uniqueNumbers = new HashSet<>();
+
+    for(int varBle : myNum) {
+    uniqueNumbers.add(varBle);
     }
 
+    System.out.println(uniqueNumbers);
 
 
 }
