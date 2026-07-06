@@ -180,8 +180,6 @@ public class LessontoothApplication {
         }
 
         System.out.println(uniqueNumbers);
-
-
     };
 
 }
