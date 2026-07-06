@@ -65,7 +65,7 @@ public class LessontoothApplication {
         }
 
         // 0, 5, 10, 15, 20 using for loop
-        System.out.println("================= task 3 ==============================");
+       System.out.println("================= task 3 ==============================");
         for (int x = 0; x <= 20; x+=5){
             System.out.println(x);
         }
@@ -84,7 +84,7 @@ public class LessontoothApplication {
         // 5,4,3,2,1
 
         for(int i =5; i >= 1; i--){
-            System.out.println(i);
+           System.out.println(i);
         }
 
         System.out.println("===============  for each loop ========");
@@ -92,7 +92,7 @@ public class LessontoothApplication {
         String[] cars = {"bmw", "toyota", "suv", "highlander", "vold", "volvo"};
 
         for (String data : cars) {
-            System.out.println(data);
+          System.out.println(data);
         }
 
         System.out.println("==================calculate the sum of all number in the collection");
@@ -103,7 +103,7 @@ public class LessontoothApplication {
 
         for (int data: numbers) {
             //total = total + data;
-            total += data;
+           total += data;
 
         }
         System.out.println(total);
@@ -168,36 +168,20 @@ public class LessontoothApplication {
         // mutable(changeable) and immutable (unchangeable)
         // ordered (well arrange in memory) and unordered (not arrange)
         // duplicate(allow duplicate value) and not duplicate (dont allow dupplicate value)
+    };
 
-        System.out.println("============= Union of sets ================");
-        // Union of sets: Combine two lists/arrays and remove duplicates.
-        int[] array1 = {1, 2, 4, 5, 6};
-        int[] array2 = {2, 3, 5, 7};
 
-        // Create the empty unionSet basket
-        HashSet<Integer> unionSet = new HashSet<>();
 
-        // Loop through the first array and add everything
-        for (int num : array1) {
-            unionSet.add(num);
-        }
+  //Given an array of integers, print only the unique values.
+  int[] myNum = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8};
 
-        // Loop through the second array and add everything
-        // The set automatically rejects the duplicates (2 and 5)
-        for (int num : array2) {
-            unionSet.add(num);
-        }
+    Set<Integer> uniqueNumbers = new HashSet<>();
 
-        // Print the complete, unique combined set
-        System.out.println("Union Result: " + unionSet);
-
+    for(int varBle : myNum) {
+    uniqueNumbers.add(varBle);
     }
+
+    System.out.println(uniqueNumbers);
+
+
 }
-
-
-
-   
-
-
-
-
