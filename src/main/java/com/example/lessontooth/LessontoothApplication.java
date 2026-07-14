@@ -1,10 +1,12 @@
 package com.example.lessontooth;
 
+import com.example.lessontooth.classtask.Weather;
 import com.example.lessontooth.task3.PhoneBook;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.springframework.util.StringUtils.split;
 import static org.springframework.util.StringUtils.toStringArray;
@@ -13,6 +15,29 @@ import static org.springframework.util.StringUtils.toStringArray;
 public class LessontoothApplication {
 
     public static void main(String[] args) {
+
+        int[] degree = {10, 15, 20, 21, 40, 45, 11, 12};
+
+        Weather temperate = new Weather();
+
+        for (int degreeNumber : degree){
+            temperate.setWeather(degreeNumber);
+            System.out.println(temperate.getWeather());
+        }
+
+        Weather temp = new Weather(20);
+
+        System.out.println(temp.getWeather());
+
+
+
+
+
+        PhoneBook phone = new PhoneBook();
+
+        phone.setNumber("+234818345646", "dav");
+        phone.getNumber();
+
 //        System.out.println("hello world");
 //        SpringApplication.run(LessontoothApplication.class, args);
 
@@ -180,6 +205,38 @@ public class LessontoothApplication {
         }
 
         System.out.println(uniqueNumbers);
+
+
+        System.out.println("Intersection of sets: Find common elements between two list");
+
+        List<Integer> myNum1 = new ArrayList<>(List.of(1, 2, 6, 8, 8));
+        List<Integer> myNum2 = new ArrayList<>(List.of(1, 2, 3, 8, 8));
+        myNum1.addAll(myNum2);
+        // set
+        Set<Integer> notDuplicate = new HashSet<>();
+        Set<Integer> intersectionSet = new HashSet<>();
+
+        for (Integer iDontKnow : myNum1) {
+            if (!notDuplicate.add(iDontKnow)){
+                intersectionSet.add(iDontKnow);
+            };
+        }
+
+        System.out.println(intersectionSet);
+
+     System.out.println("Union of sets: Combine two lists and remove duplicates");
+
+        List<Integer> num1 = new ArrayList<>(List.of(1, 2, 6, 8, 8));
+        List<Integer> num2 = new ArrayList<>(List.of(1, 2, 3, 8, 8));
+        num1.addAll(num2);
+
+        Set<Integer> unionSet = new HashSet<>();
+
+        for (Integer union : num1){
+            unionSet.add(union);
+        }
+        System.out.println(unionSet);
+
     };
 
 }
