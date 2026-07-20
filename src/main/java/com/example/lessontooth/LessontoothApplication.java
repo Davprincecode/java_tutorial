@@ -1,5 +1,7 @@
 package com.example.lessontooth;
 
+import com.example.lessontooth.classtask.Student;
+import com.example.lessontooth.classtask.StudentGrade;
 import com.example.lessontooth.classtask.Weather;
 import com.example.lessontooth.task3.PhoneBook;
 import org.springframework.boot.SpringApplication;
@@ -30,16 +32,30 @@ public class LessontoothApplication {
         System.out.println(temp.getWeather());
 
 
-
-
-
         PhoneBook phone = new PhoneBook();
 
         phone.setNumber("+234818345646", "dav");
         phone.getNumber();
 
-//        System.out.println("hello world");
-//        SpringApplication.run(LessontoothApplication.class, args);
+        Student student = new Student("adeoke sola", 25, "csc 301", 4.5);
+
+        student.getCgpa();
+
+        StudentGrade grade = new StudentGrade("salako ahmed", 30);
+
+        grade.setGrade("csc 301", 60.5);
+        grade.setGrade("csc 302", 70.0);
+        grade.setGrade("csc 303", 80.0);
+        grade.setGrade("csc 304", 90.0);
+        grade.setGrade("csc 305", 40.5);
+
+        System.out.println(grade.calculateCgpa());
+
+        System.out.println(grade.getGrade());
+
+
+        //System.out.println("hello world");
+        //SpringApplication.run(LessontoothApplication.class, args);
 
         //Scanner myObj = new Scanner(System.in);
         //String userName;
